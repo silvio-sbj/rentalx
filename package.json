@@ -1,7 +1,7 @@
 {
   "name": "rentalx",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/server.ts",
   "repository": "https://github.com/silvio-sbj/rentalx.git",
   "author": "Silvio Junior <silvio_sbj@hotmail.com>",
   "license": "MIT",
