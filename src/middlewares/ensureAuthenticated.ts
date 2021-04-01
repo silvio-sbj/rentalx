@@ -3,6 +3,7 @@ import { verify } from 'jsonwebtoken';
 import { AppError } from '../errors/AppError';
 
 import { UsersRepository } from '../modules/accounts/repositories/implementations/UsersRepository';
+import { usersRoutes } from '../routes/users.routes';
 
 interface IPayload {
   sub: string;
@@ -29,10 +30,14 @@ export async function ensureAuthenticated(
 
     const usersRepository = new UsersRepository();
 
-    const alreadyExists = await usersRepository.findById(user_id);
-    if (!alreadyExists) {
+    const user = await usersRepository.findById(user_id);
+    if (!user) {
       throw new AppError('User does not exists', 401);
     }
+
+    request.user = {
+      id: user_id,
+    };
 
     next();
   } catch {
