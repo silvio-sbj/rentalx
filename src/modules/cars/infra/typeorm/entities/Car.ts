@@ -25,10 +25,10 @@ class Car {
   daily_rate: number;
 
   @Column()
-  available: true;
+  available: boolean;
 
   @Column()
-  license_plate: boolean;
+  license_plate: string;
 
   @Column()
   fine_amount: number;
