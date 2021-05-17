@@ -1,8 +1,12 @@
+.vscode
+
 #tmp
-tmp
+tmp/*
+!tmp/.gitkeep
 
 #dist
-dist/
+dist
+ormconfig.json
 
 # Logs
 logs
