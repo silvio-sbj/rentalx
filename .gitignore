@@ -1,6 +1,9 @@
 #tmp
 tmp
 
+#dist
+dist/
+
 # Logs
 logs
 *.log
